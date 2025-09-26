@@ -1,0 +1,119 @@
+body{
+    background-image: url("nqpbi2.jpg");
+    border:2px solid white;
+    background-size: cover;
+}
+.outline{
+    height: 453px;
+    width: 450px;
+    background-color:grey;
+    position: absolute;
+    margin-top: 110px;
+    margin-left: 150px;
+    border:2px solid grey;
+    border-radius: 10px;
+}
+.obox{
+    width:450px;
+    height:113px;
+    /*background-color: bisque;*/
+    display:flex;
+    justify-content: space-evenly;
+}
+.box{
+    height:110px;
+    width:110px;
+    background-color:rgb(54, 55, 56);
+    border:2px solid grey;
+    border-radius: 10px;
+    background-size:cover;
+}
+.box:hover{
+    background-color: rgb(67, 68, 70);
+    cursor: pointer;
+}
+.tnqtbp{
+    height:70px;
+    width:480px;
+    position:absolute;    
+    font-size: 40px;
+    margin-left: 750px;
+    margin-top: 180px;
+    color: white;
+}
+
+.tnqtbpn{
+    height: 30px; 
+    width: 20px;
+    position:absolute;    
+    font-size: 40px;
+    margin-left: 1125px;
+    margin-top: 227px;
+    color: white;
+}
+.nqyp{
+    height:70px;
+    width:480px;
+    position:absolute;    
+    font-size: 40px;
+    margin-left: 750px;
+    margin-top: 300px; 
+    color: white;
+}
+.nqypn{
+    height: 30px;
+    width: 20px;
+    position:absolute;    
+    font-size: 40px;
+    margin-left: 1100px;
+    margin-top: 345px;
+    color: white;
+}
+.notification{
+    height:70px;
+    width:400px;
+    /*background-color: rgba(161, 159, 159,0.5);*/
+    position:absolute;
+    margin-left: 900px;
+    margin-top: 450px;
+    font-size: 30px;
+    text-align: center;
+    /*border:2px solid black;*/
+    border-radius: 30px;
+}
+.winsec{
+    height:110px;
+    width:500px;
+    /*background-color: rgba(161, 159, 159,0.5);*/
+    position:absolute;
+    margin-left: 680px;
+    margin-top: 430px;
+    padding-top:40px;
+    font-size: 50px;
+    text-align: center;
+    /*border:2px solid black;*/
+    border-radius: 30px; 
+    color: white;
+}
+.cellimg{
+    height:50px;
+    width:50px;
+}
+#ca{
+    height:62px;
+    width:200px;
+    position: absolute;
+    background-color:red;
+    margin-left: 1250px;
+    margin-top: 550px;
+    border-radius: 25px;
+    color:white;
+    text-align: center;
+    font-size: 35px;
+    padding-top: 18px;
+    border:2px solid transparent;
+}
+#ca:hover{
+    cursor: pointer;
+    border: 2px solid black;
+}

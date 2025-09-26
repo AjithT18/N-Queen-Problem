@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>N QUEEN Game</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="main-header">
+        <div class="logo">
+            <h1>N QUEEN</h1>
+        </div>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#login">Login</a></li>
+                <li><a href="#signup">Sign Up</a></li>
+            </ul>
+        </nav>
+        <div class="header-icons">
+            <a href="#" class="icon"><img src="settings-icon.png" alt="Settings"></a>
+            <a href="#" class="icon"><img src="message-icon.png" alt="Messages"></a>
+        </div>
+    </header>
+
+    <main class="game-container">
+        <section class="game-panel">
+            <div class="profile-widget">
+                <img src="avatar-placeholder.png" alt="Player Avatar" class="profile-avatar">
+                <div class="profile-info">
+                    <h3 class="player-name">Player_One</h3>
+                    <div class="level-info">
+                        <span class="level-text">MONSTER LEVEL </span>
+                        <span class="level-value">0</span>
+                    </div>
+                    <div class="xp-bar-container">
+                        <div class="xp-bar-fill"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="game-options">
+                <a class="game-button" href="C44HTML.html">4 X 4</a>
+                <a class="game-button" href="C88HTML.html">8 X 8</a>
+            </div>
+
+            <div class="pulsing-element"></div>
+        </section>
+    </main>
+
+    <section id="about" class="page-section hidden">
+        <h2>About N QUEEN</h2>
+        <p class="section-description">
+            Welcome to N QUEEN, a strategic puzzle game based on the classic N-Queens problem. The challenge is to place N chess queens on an N×N chessboard so that no two queens threaten each other. This means no two queens can share the same row, column, or diagonal. 👑
+        </p>
+        <p class="section-description">
+            Select your board size, test your logic, and conquer the ultimate test of foresight and strategy. Can you find a solution?
+        </p>
+    </section>
+
+    <section id="contact" class="page-section hidden">
+        <h2>Contact Us</h2>
+        <p class="section-description">Have a question, suggestion, or bug report? We'd love to hear from you!</p>
+        <form class="contact-form">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+            <input type="submit" value="Send Message">
+        </form>
+    </section>
+
+    <section id="login" class="page-section hidden">
+        <h2>Login</h2>
+        <form class="auth-form">
+            <input type="text" name="username" placeholder="Username or Email" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <input type="submit" value="Login">
+            <p class="form-footer">Don't have an account? <a href="#" class="form-link" data-target="signup">Sign Up</a></p>
+        </form>
+    </section>
+
+    <section id="signup" class="page-section hidden">
+        <h2>Sign Up</h2>
+        <form class="auth-form">
+            <input type="text" name="username" placeholder="Username" required>
+            <input type="email" name="email" placeholder="Email Address" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <input type="password" name="confirm_password" placeholder="Confirm Password" required>
+            <input type="submit" value="Create Account">
+            <p class="form-footer">Already have an account? <a href="#" class="form-link" data-target="login">Login</a></p>
+        </form>
+    </section>
+
+    <section id="profile" class="page-section hidden">
+        <h2>Player Profile</h2>
+        <p>Detailed information about the current player, stats, achievements.</p>
+    </section>
+
+    <script>
+        // Add this inside your DOMContentLoaded event listener, after the navLinks loop
+        document.addEventListener('DOMContentLoaded', () => {
+    // Get all the elements we need to work with
+    const navLinks = document.querySelectorAll('.main-nav a');
+    const pageSections = document.querySelectorAll('.page-section');
+    const gameContainer = document.querySelector('.game-container');
+    const formSwitchLinks = document.querySelectorAll('.form-link');
+
+    // This is the main function that controls what is visible
+    const showPage = (targetId) => {
+        // First, hide the main game container
+        gameContainer.style.display = 'none';
+        
+        // Deactivate all pop-up sections
+        pageSections.forEach(section => {
+            section.classList.remove('active');
+        });
+
+        // Now, show the correct page
+        if (targetId === 'home') {
+            // If the target is 'home', show the game container
+            gameContainer.style.display = 'flex';
+        } else {
+            // Otherwise, find the matching section and make it 'active' (visible)
+            const targetSection = document.getElementById(targetId);
+            if (targetSection) {
+                targetSection.classList.add('active');
+            }
+        }
+    };
+
+    // 1. Add click listeners to the main navigation links (in the header)
+    navLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            // Get the ID from the link's href (e.g., "login" from "#login")
+            const targetId = link.getAttribute('href').substring(1);
+            showPage(targetId);
+        });
+    });
+
+    // 2. Add click listeners to the links inside the forms (e.g., "Sign Up" from Login form)
+    formSwitchLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            // Get the ID from the link's data-target attribute
+            const targetId = link.dataset.target;
+            showPage(targetId);
+        });
+    });
+
+    // Set the initial state when the page loads: show the game.
+    showPage('home');
+});
+    </script>
+</body>
+</html>

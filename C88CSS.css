@@ -1,0 +1,153 @@
+body{
+    background-image: url("nqpbi2.jpg");
+    border:2px solid white;
+    background-size: cover;
+}
+.outline{
+    height: 650px;
+    width: 650px;
+    background-color:grey;
+    position: absolute;
+    margin-top: 30px;
+    margin-left: 80px;
+    border:2px solid grey;
+    border-radius: 10px;
+}
+.obox{
+    width:650px;
+    height:81.25px;
+    /*background-color: bisque;*/
+    display:flex;
+    justify-content: space-evenly;
+}
+.box{
+    height:78.25px;
+    width:78.25px;
+    background-color:rgb(54, 55, 56);
+    border:2px solid:grey;
+    border-radius: 10px;
+    background-size:cover;
+}
+.box:hover{
+    background-color: rgb(67, 68, 70);
+    cursor: pointer;
+}
+.tnqtbp{
+    height:70px;
+    width:480px;
+    position:absolute;    
+    font-size: 40px;
+    margin-left: 850px;
+    margin-top: 90px;
+    color: white;
+}
+
+.tnqtbpn{
+    height: 30px; 
+    width: 20px;
+    position:absolute;    
+    font-size: 40px;
+    margin-left: 1225px;
+    margin-top: 135px;
+    color: white;
+}
+.nqyp{
+    height:70px;
+    width:480px;
+    position:absolute;    
+    font-size: 40px;
+    margin-left: 850px;
+    margin-top: 200px; 
+    color: white;
+}
+.nqypn{
+    height: 30px;
+    width: 20px;
+    position:absolute;    
+    font-size: 40px;
+    margin-left: 1200px;
+    margin-top: 245px;
+    color: white;
+}
+.notification{
+    height:70px;
+    width:400px;
+    /*background-color: rgba(161, 159, 159,0.5);*/
+    position:absolute;
+    margin-left: 900px;
+    margin-top: 450px;
+    font-size: 30px;
+    text-align: center;
+    /*border:2px solid black;*/
+    border-radius: 30px;
+}
+.winsec{
+    height:110px;
+    width:500px;
+    /*background-color: rgba(161, 159, 159,0.5);*/
+    position:absolute;
+    margin-left: 870px;
+    margin-top: 350px;
+    padding-top:40px;
+    font-size: 50px;
+    text-align: center;
+    /*border:2px solid black;*/
+    border-radius: 30px; 
+    color: white;
+}
+.cellimg{
+    height:50px;
+    width:50px;
+}
+#ca{
+    height:62px;
+    width:200px;
+    position: absolute;
+    background-color:red;
+    margin-left: 1250px;
+    margin-top: 550px;
+    border-radius: 25px;
+    color:white;
+    text-align: center;
+    font-size: 35px;
+    padding-top: 18px;
+    border:2px solid transparent;
+}
+#ca:hover{
+    cursor: pointer;
+    border: 2px solid black;
+}
+@media((max-width:500px)){
+   .outline{
+    margin-top: 30px;
+    margin-left: 20px;
+   } 
+   .tnqtbp{ 
+    margin-left: 20px;
+    margin-top: 750px;
+   }
+   .tnqtbpn{
+    margin-left:295px;
+    margin-top: 785px;
+   }
+   .nqyp{    
+    margin-left: 20px;
+    margin-top: 848px; 
+   }
+   .nqypn{  
+    margin-left: 273px;
+    margin-top: 883px;
+   }
+   #ca{
+    margin-left: 350px;
+    margin-top: 700px;
+   }
+   .winsec{
+    height:55px;
+    width:200px;
+    margin-left: 370px;
+    margin-top: 830px;
+    font-size: 20px;
+    padding-top: 25px;
+   }
+}
